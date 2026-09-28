@@ -12,7 +12,7 @@ export const ExperienceTimeline: React.FC = () => {
         </div>
         <h2 className="text-3xl font-extrabold text-white">Work Experience</h2>
         <p className="text-gray-400 text-sm">
-          Hands-on software development experience building production-ready frontend architectures and web applications.
+          Hands-on software engineering experience building scalable full-stack modules, AI-driven architectures, and high-performance web applications.
         </p>
       </div>
 

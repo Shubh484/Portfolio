@@ -1,5 +1,5 @@
 import React from 'react';
-import { GraduationCap, MapPin, Calendar } from 'lucide-react';
+import { GraduationCap, MapPin, Calendar, Award } from 'lucide-react';
 import { education } from '../../data/resumeData';
 
 export const EducationSection: React.FC = () => {
@@ -14,15 +14,23 @@ export const EducationSection: React.FC = () => {
       </div>
 
       <div className="bg-[#111622]/90 border border-white/10 hover:border-cyan-500/40 rounded-2xl p-6 sm:p-8 backdrop-blur-xl transition-all shadow-lg hover:shadow-cyan-500/10 space-y-4">
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-white/10 pb-4">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-3 border-b border-white/10 pb-4">
           <div className="space-y-1">
             <h3 className="text-xl font-bold text-white leading-tight">{education.degree}</h3>
             <p className="text-amber-400 font-semibold text-sm">{education.institution}</p>
           </div>
 
-          <div className="flex items-center space-x-2 text-xs font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1.5 rounded-full w-fit">
-            <Calendar className="w-3.5 h-3.5" />
-            <span>{education.period}</span>
+          <div className="flex flex-wrap items-center gap-2">
+            {education.cgpa && (
+              <span className="px-3 py-1 rounded-full text-xs font-mono font-bold bg-emerald-500/15 text-emerald-400 border border-emerald-500/30 flex items-center space-x-1">
+                <Award className="w-3.5 h-3.5" />
+                <span>CGPA: {education.cgpa}</span>
+              </span>
+            )}
+            <div className="flex items-center space-x-1.5 text-xs font-mono text-amber-400 bg-amber-500/10 border border-amber-500/20 px-3 py-1 rounded-full w-fit">
+              <Calendar className="w-3.5 h-3.5" />
+              <span>{education.period}</span>
+            </div>
           </div>
         </div>
 

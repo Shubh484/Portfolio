@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, CheckCircle2, Cpu, Layers, Sparkles } from 'lucide-react';
+import { X, CheckCircle2, Cpu, Layers, Sparkles, ExternalLink } from 'lucide-react';
 import { GithubIcon } from '../Common/Icons';
 import type { Project } from '../../types';
 
@@ -21,6 +21,12 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               <span className="px-2.5 py-0.5 rounded text-[11px] font-mono uppercase font-bold bg-cyan-500/20 text-cyan-300 border border-cyan-500/30">
                 {project.category}
               </span>
+              {project.liveUrl && (
+                <span className="px-2.5 py-0.5 rounded text-[11px] font-mono font-bold bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 flex items-center space-x-1">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Production Live</span>
+                </span>
+              )}
               {project.featured && (
                 <span className="px-2.5 py-0.5 rounded text-[11px] font-mono font-bold bg-amber-500/20 text-amber-300 border border-amber-500/30 flex items-center space-x-1">
                   <Sparkles className="w-3 h-3" />
@@ -100,6 +106,17 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </button>
 
           <div className="flex items-center space-x-3">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noreferrer"
+                className="flex items-center space-x-1.5 px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-400 hover:to-cyan-500 text-black font-mono text-xs font-bold transition-all shadow-md shadow-cyan-500/20 cursor-pointer"
+              >
+                <ExternalLink className="w-4 h-4" />
+                <span>Visit Live Platform ({project.liveUrl.replace('https://', '')})</span>
+              </a>
+            )}
             {project.githubUrl && (
               <a
                 href={project.githubUrl}

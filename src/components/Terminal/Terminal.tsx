@@ -122,7 +122,7 @@ export const Terminal: React.FC<TerminalProps> = ({
               <div className="text-amber-400 font-bold text-sm">
                 WELCOME TO SHUBH SINGH'S INTERACTIVE DEVELOPER TERMINAL [v2.5.0]
               </div>
-              <div>Frontend Developer | React, Next.js, Redux, Vue.js, GenAI & Agentic Systems</div>
+              <div>AI Full Stack Developer | React, Next.js, Node.js, Python, RAG & Vector Databases</div>
               <div className="text-gray-400">
                 Type <span className="text-amber-400 font-bold">'help'</span> to view commands or click <span className="text-cyan-400 font-bold">'GUI View'</span> for the visual dashboard.
               </div>

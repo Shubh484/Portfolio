@@ -9,6 +9,7 @@ export const SkillsGrid: React.FC = () => {
       case 'Layout': return <Layout className="w-4 h-4 text-cyan-400" />;
       case 'Bot': return <Bot className="w-4 h-4 text-emerald-400" />;
       case 'Server': return <Server className="w-4 h-4 text-purple-400" />;
+      case 'Cpu': return <Cpu className="w-4 h-4 text-pink-400" />;
       default: return <Wrench className="w-4 h-4 text-amber-400" />;
     }
   };
@@ -22,7 +23,7 @@ export const SkillsGrid: React.FC = () => {
         </div>
         <h2 className="text-3xl font-extrabold text-white">Skills & Technical Stack</h2>
         <p className="text-gray-400 text-sm max-w-xl">
-          Comprehensive set of modern languages, frontend frameworks, GenAI tools, and developer practices.
+          Comprehensive technical stack across AI & LLM engineering, AI-assisted development (Cursor), modern frontend, backend architectures, and DevOps practices.
         </p>
       </div>
 

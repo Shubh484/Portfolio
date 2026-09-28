@@ -21,7 +21,7 @@ export const OutputRow: React.FC<OutputRowProps> = ({ command, onRunCommand }) =
           <div><span className="text-amber-400 font-bold">about</span> <span className="text-gray-400">- Career overview & summary</span></div>
           <div><span className="text-amber-400 font-bold">skills</span> <span className="text-gray-400">- Tech stack breakdown</span></div>
           <div><span className="text-amber-400 font-bold">projects</span> <span className="text-gray-400">- Featured projects & case studies</span></div>
-          <div><span className="text-amber-400 font-bold">experience</span> <span className="text-gray-400">- Work history at CarWyapar</span></div>
+          <div><span className="text-amber-400 font-bold">experience</span> <span className="text-gray-400">- Work history at Kutaj Tech</span></div>
           <div><span className="text-amber-400 font-bold">education</span> <span className="text-gray-400">- Academic degree & credentials</span></div>
           <div><span className="text-amber-400 font-bold">contact</span> <span className="text-gray-400">- Email, Phone, Social links</span></div>
           <div><span className="text-amber-400 font-bold">theme &lt;name&gt;</span> <span className="text-gray-400">- Switch theme (retro|matrix|dracula|cyberpunk|monokai)</span></div>
@@ -112,9 +112,22 @@ export const OutputRow: React.FC<OutputRowProps> = ({ command, onRunCommand }) =
                   <span className="text-amber-400 font-bold text-sm">{proj.title}</span>
                   <span className="text-gray-400 text-xs">({proj.subtitle})</span>
                 </div>
-                <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 w-fit">
-                  {proj.category}
-                </span>
+                <div className="flex items-center space-x-2">
+                  {proj.liveUrl && (
+                    <a
+                      href={proj.liveUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="text-[10px] font-bold px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 hover:bg-emerald-500/30 flex items-center space-x-1"
+                    >
+                      <ExternalLink className="w-2.5 h-2.5" />
+                      <span>{proj.liveUrl.replace('https://', '')}</span>
+                    </a>
+                  )}
+                  <span className="text-[10px] uppercase font-bold px-2 py-0.5 rounded bg-cyan-500/20 text-cyan-300 border border-cyan-500/30 w-fit">
+                    {proj.category}
+                  </span>
+                </div>
               </div>
               <p className="text-gray-300 text-xs leading-relaxed">{proj.fullDescription}</p>
               <div className="space-y-1 pt-1">
@@ -187,7 +200,14 @@ export const OutputRow: React.FC<OutputRowProps> = ({ command, onRunCommand }) =
         <div className="p-3.5 bg-white/5 rounded border border-white/10 space-y-2">
           <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-1">
             <span className="text-amber-400 font-bold text-sm">{education.degree}</span>
-            <span className="text-gray-400 text-xs">{education.period}</span>
+            <div className="flex items-center space-x-2">
+              {education.cgpa && (
+                <span className="px-2 py-0.5 rounded bg-emerald-500/20 text-emerald-300 font-bold text-[10px] border border-emerald-500/30">
+                  CGPA: {education.cgpa}
+                </span>
+              )}
+              <span className="text-gray-400 text-xs">{education.period}</span>
+            </div>
           </div>
           <div className="text-cyan-300 font-semibold">{education.institution} — {education.location}</div>
         </div>

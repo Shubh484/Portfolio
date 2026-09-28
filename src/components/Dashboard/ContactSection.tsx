@@ -41,7 +41,7 @@ export const ContactSection: React.FC = () => {
         </div>
         <h2 className="text-3xl font-extrabold text-white">Let's Build Something Exceptional</h2>
         <p className="text-gray-400 text-sm max-w-xl">
-          Interested in discussing a frontend engineering role, GenAI agent integration, or trading platform architecture? Get in touch!
+          Interested in discussing an AI full-stack engineering role, RAG & agentic workflows, or trading platform architecture? Get in touch!
         </p>
       </div>
 

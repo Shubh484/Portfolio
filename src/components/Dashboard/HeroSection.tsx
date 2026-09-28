@@ -28,18 +28,18 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onToggleCLI }) => {
           <h1 className="text-4xl sm:text-6xl font-extrabold tracking-tight text-white leading-tight">
             Building High-Performance <br className="hidden sm:inline" />
             <span className="bg-gradient-to-r from-cyan-400 via-cyan-300 to-amber-400 bg-clip-text text-transparent">
-              Web Apps & AI Systems
+              AI Systems & Scalable Web Apps
             </span>
           </h1>
 
           <p className="text-gray-300 text-base sm:text-lg leading-relaxed font-sans">
-            Hi, I'm <strong className="text-amber-400 font-semibold">{personalDetails.name}</strong>, a Frontend Developer specialized in React.js, Next.js, Redux, Vue.js, TypeScript, and Generative AI architectures (RAG & VectorDB). I craft scalable enterprise web applications, trading platforms, and AI knowledge assistants.
+            Hi, I'm <strong className="text-amber-400 font-semibold">{personalDetails.name}</strong>, an AI Full Stack Developer specialized in React.js, Next.js, TypeScript, Node.js, Python, and Generative AI (RAG, Vector Databases & Agentic Workflows). Expert at leveraging AI IDEs (Cursor) and AI coding agents to rapidly build high-performance, enterprise-grade digital solutions.
           </p>
         </div>
 
         {/* Core Tech Stack Badges */}
         <div className="flex flex-wrap items-center gap-2 pt-2">
-          {['React.js', 'Next.js', 'Redux', 'Vue.js', 'Nuxt.js', 'TypeScript', 'Tailwind CSS', 'GenAI / RAG', 'VectorDB'].map((tech) => (
+          {['React.js', 'Next.js', 'TypeScript', 'Node.js', 'Python', 'RAG / VectorDB', 'Agentic Workflows', 'Cursor AI', 'Redux', 'Tailwind CSS'].map((tech) => (
             <span
               key={tech}
               className="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-gray-300 text-xs font-mono font-semibold hover:border-cyan-500/40 hover:text-cyan-300 transition-colors"
@@ -84,8 +84,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onToggleCLI }) => {
               <Code className="w-4 h-4" />
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-gray-400">Current Role</span>
             </div>
-            <div className="text-white font-bold text-sm">Frontend Developer</div>
-            <div className="text-amber-400 text-xs font-semibold">@ CarWyapar (Remote)</div>
+            <div className="text-white font-bold text-sm">AI Full Stack Developer</div>
+            <div className="text-amber-400 text-xs font-semibold">@ Kutaj Tech (Remote)</div>
           </div>
 
           <div className="p-4 rounded-xl bg-[#111622]/90 border border-cyan-500/20 backdrop-blur-md space-y-1.5">
@@ -93,8 +93,8 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onToggleCLI }) => {
               <Cpu className="w-4 h-4" />
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-gray-400">AI Specialization</span>
             </div>
-            <div className="text-white font-bold text-sm">RAG & Vector Search</div>
-            <div className="text-cyan-300 text-xs">LLM Agents & Context Retrieval</div>
+            <div className="text-white font-bold text-sm">RAG & Agentic Workflows</div>
+            <div className="text-cyan-300 text-xs">VectorDB & Semantic Search</div>
           </div>
 
           <div className="p-4 rounded-xl bg-[#111622]/90 border border-cyan-500/20 backdrop-blur-md space-y-1.5">
@@ -102,7 +102,7 @@ export const HeroSection: React.FC<HeroSectionProps> = ({ onToggleCLI }) => {
               <Database className="w-4 h-4" />
               <span className="text-xs font-mono font-bold uppercase tracking-wider text-gray-400">Education</span>
             </div>
-            <div className="text-white font-bold text-sm">B.Tech (CS & IT)</div>
+            <div className="text-white font-bold text-sm">B.Tech (CS & IT) • 7.4 CGPA</div>
             <div className="text-emerald-400 text-xs font-semibold">Dronacharya Group of Institutions</div>
           </div>
         </div>
